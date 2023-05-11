@@ -1,0 +1,21 @@
+﻿.encabezado{
+    background-color:green;
+    height:3.5rem;
+    padding:0;
+    position:sticky;
+}
+
+
+
+.tarjeta{
+    height:20rem;
+    width:40rem;
+}
+
+.eventos{
+    margin-top:10rem;
+}
+.htarjeta{
+    height:4rem;
+    background-color:green;
+}
