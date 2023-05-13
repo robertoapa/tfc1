@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.DependencyInjection;
 using tfc1.Data;
 using tfc1;
+using tfc1.Models.Interfaces;
+using tfc1.Models.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +16,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<ILoginService, LoginService>();
+
 
 var app = builder.Build();
 builder.Configuration.AddJsonFile("appsettings.json");
+
+
 
 //builder.Services.AddScoped(sp =>
 //    new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });

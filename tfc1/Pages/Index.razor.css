@@ -9,7 +9,8 @@
 
 .tarjeta{
     height:20rem;
-    width:40rem;
+    /*width:40rem;*/
+    margin-top:2rem;
 }
 
 .eventos{
@@ -18,4 +19,10 @@
 .htarjeta{
     height:4rem;
     background-color:green;
+}
+
+
+.titulo {
+    height: 4rem;
+    background-color: #1F8544;
 }

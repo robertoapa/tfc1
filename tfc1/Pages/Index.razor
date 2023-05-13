@@ -6,18 +6,38 @@
 </div>
 *@
 
-<div class="eventos">
+<div class="w-100 text-center titulo">
+    <h2>Eventos en tu zona</h2>
+</div>
 
-    <div class="tarjeta mx-auto rounded shadow">
-        <div class="htarjeta text-center pt-3 d-flex">
-            <div class="w-50 text-right">
-                <h4 class="text-light">Titulo evento</h4>
+
+<div class="eventos row w-100">
+
+    @for(var i = 0 ; i<10; i++)
+    {   
+        <div class="tarjeta mx-auto rounded shadow col-lg-5 col-md-12">
+            <div class="htarjeta w-100 text-center rounded-top pt-3 d-flex">
+                <div class="w-50 text-right">
+                    <h4 class="text-light">Titulo evento</h4>
+                </div>
+                <div class="w-50 text-end pe-5">
+                    <i class="bi bi-8-circle-fill bi-text-right"></i>
+                </div>
             </div>
-            <div class="w-50 text-end pe-5">
-                <i class="bi bi-8-circle-fill bi-text-right"></i>
+            <div class="contenido container w-100 ps-5">
+                <p>Numero participantes: </p>
+                <p>deporte: </p>
+                <p>Lugar</p>
+                <p class="col-12">descripcion:</p>
+                <p>fecha:</p>
+            </div>
+            <div class="col-10 mx-auto">
+
+                <buttton class="btn btn-success col-12 mx-auto">unirse</buttton>
             </div>
         </div>
-    </div>
+    }
+  
 </div>
 
 

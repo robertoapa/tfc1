@@ -1,6 +1,9 @@
-﻿namespace tfc1.Models.Interfaces
+﻿using tfc1.ViewModels;
+
+namespace tfc1.Models.Interfaces
 {
-    public class ILoginService
+    public interface ILoginService
     {
+        Task<List<UsuariosVm>> GetUsuarios();
     }
 }
