@@ -1,11 +1,14 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@media (min-width: 641px){ 
+    .top-row[b-ev4x3yjhfj], article[b-ev4x3yjhfj] {
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+    }
 }
 
-h1:focus {
-    outline: none;
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a, .btn-link {
@@ -64,6 +67,7 @@ a, .btn-link {
     }
 
 
-article[b-ev4x3yjhfj] {
-    padding-left: 0px;
+article {
+    padding-left:0px !important;
 }
+

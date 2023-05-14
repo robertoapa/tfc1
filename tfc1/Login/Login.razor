@@ -1,0 +1,45 @@
+﻿@page "/Login"
+@inherits LayoutComponentBase
+
+
+<div class="col-md-6 mx-auto container shadow p-5 rounded">
+    <div class="text-center">
+        <i class="bi bi-person-circle"></i>
+        <h3>Iniciar Sesión</h3>
+    </div>
+    <div class="form-group">
+        <label for="correo">Correo Electronico</label>
+        <input class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Example: fweafioh@gmail.com" @bind="correo">
+        <small id="emailHelp" class="form-text text-muted">No compartiremos tu correo electrónico con nadie.</small>
+    </div>
+    <div class="form-group">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" class="form-control" id="contraseña" placeholder="Contraseña..." @bind="contraseña">
+
+    </div>
+    <button class="btn btn-primary mt-2" @onclick="IniciarSesion">Iniciar Sesion</button>
+
+
+    @if (sesion)
+    {
+        <p class="text-danger">@mensaje</p>
+    }
+
+
+</div>
+
+
+@code {
+    public string correo { get; set; }
+    public string contraseña { get; set; }
+    public string mensaje { get; set; }
+    public bool sesion { get; set; } = false;
+    void IniciarSesion()
+    {
+        if (correo != "" && contraseña != "")
+        {
+            mensaje = $"has iniciado sesion, tu correo es: {correo} \n y tu contraseña: {contraseña}";
+            sesion = true;
+        }
+    }
+}

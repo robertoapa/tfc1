@@ -6,9 +6,38 @@
 </div>
 *@
 
-<div class="w-100 text-center titulo">
-    <h2>Eventos en tu zona</h2>
+<div class="w-100 text-center titulo pt-2 text-light">
+    <h2 class="">Eventos en tu zona</h2>
 </div>
+
+<form class="mt-5">
+    <div class="row col-6 mx-auto">
+        <div class="col-6 m">
+            <label for="exampleFormControlSelect1">Deporte:</label>
+            <select class="form-control col-5" id="exampleFormControlSelect1">
+                <option>Futbol</option>
+                <option>Tenis</option>
+                <option>Padel</option>
+                <option>Futsal</option>
+                <option>Running</option>
+                <option>Baloncesto</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <label for="NumeroParticipantesform">Numero de participantes:</label>
+            <select class="form-control col-5" id="NumeroParticipantesform" >
+                @for(var i = 1 ;i<20; i++)
+                {
+                    <option>@i</option>
+                }
+            </select>
+        </div>
+        <div class="col-6 mx-auto mt-4">
+            <button class="w-100 btn btn-primary">Buscar</button>
+        </div>
+    </div>
+
+</form>
 
 
 <div class="eventos row w-100">
@@ -42,5 +71,5 @@
 
 
 @code{
-
+    public int NumParticipantes { get; set; }
 }
